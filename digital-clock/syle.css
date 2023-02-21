@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;500;700&display=swap');
+
+:root {
+    --app-bg: #131627; 
+    --text-color: #fff;
+    --clock-bg: #090b1a;
+    --inset-clock-bg: #00041a; 
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100vh;
+    background-color: var(--app-bg);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.clock-items,
+.data-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7rem;
+}
+
+.data-items {
+    margin-left: 1rem;
+    padding-top: 2.3rem;
+    gap: .4rem;
+}
+
+.data-items span {
+    font-size: .6rem;
+    font-weight: 600;
+}
+
+.clock-items div[class$="time"],
+.data-items div[class$="date"] {
+    width: 4rem;
+    height: 4rem;
+    border-radius: .8rem;
+    background-color: var(--clock-bg);
+    box-shadow: inset 0px 0px 27px -5px var(--inset-clock-bg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.data-items div[class$="date"]  {
+    width: 1.6rem;
+    height: 1.5rem;
+    font-size: .6rem;
+    border-radius: .4rem;
+}
+
+.clock-items div[class$="time"]::before {
+    content: attr(data-time);
+    font-size: .6rem;
+    font-weight: 600;
+    position: absolute;
+    top: -14px;
+}
+
+.data-items div[class$="date"]::before {
+    content: attr(data-date);
+    font-size: .4rem;
+    font-weight: 600;
+    position: absolute;
+    top: -11px;
+}
