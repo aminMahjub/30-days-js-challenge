@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+:root {
+    --app-bg: rgb(20, 22, 39);
+    --btn-bg: rgb(255, 99, 71);
+    --quotes-bg: rgb(3, 120, 156);
+    --text-cl: rgb(255, 255, 255);
+    --quotes-txt-cl: rgb(202, 205, 221);
+}
+
+* {
+    padding: 0rem;
+    margin: 0rem;
+    border: 0rem;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: var(--app-bg);
+    height: 100vh;
+    display: grid;
+
+    font-weight: 500;
+    font-family: 'Tilt Neon', cursive;
+    color: var(--text-cl);
+}
+
+main {
+    align-self: center;
+    margin-inline: auto;
+    display: grid;
+    justify-content: center;
+}
+
+.quotes-generator-btn {
+    margin-inline: auto;
+    background-color: var(--btn-bg);
+    color: var(--text-cl);
+    padding: .5rem;
+    border-radius: .6rem;
+    cursor: pointer;
+}
+
+.quotes-box {
+    max-width: min(100%, 44rem);
+    background-color: var(--quotes-bg);
+    color: var(--quotes-txt-cl);
+    padding: 2.9rem .8rem .8rem;
+    margin-top: .7rem;
+    border-radius: .6rem;
+    justify-self: center;
+
+    background-image: url(./img/quote.png);
+    background-repeat: no-repeat;
+    background-size: 2.5rem;
+    background-position: left .8rem top .9rem;
+}
+
+.quotes {
+    font-size: 1.4rem;
+    color: var(--quotes-txt-cl);
+    margin-bottom: .8rem;
+    text-align: center;
+}
+
+.author {
+    display: block;
+    text-align: right;
+}

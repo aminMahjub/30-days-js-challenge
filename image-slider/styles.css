@@ -85,7 +85,7 @@ div[class$="desc"] p {
 }
 
 .image-sliders-container:hover div[class$="desc"] {
-    transform: translateY(237%);
+    transform: translateY(253%);
 }
 
 .image-slider-changer-btns {
