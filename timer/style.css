@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+:root {
+    --app-bg: rgb(20, 22, 39);
+    --important-cl: var(--input-date-bg);
+    --input-date-bg: rgb(207, 207, 16);
+    --text-cl: rgb(255, 255, 255);
+}
+
+* {
+    padding: 0rem;
+    margin: 0rem;
+    border: 0rem;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: var(--app-bg);
+    height: 100vh;
+    display: grid;
+
+    font-weight: 500;
+    font-family: 'Tilt Neon', cursive;
+    color: var(--text-cl);
+}
+
+main {
+    align-self: center;
+    margin-inline: auto;
+    display: grid;
+    justify-content: center;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-cl);
+    margin-bottom: .8rem;
+}
+
+important {
+    color: var(--important-cl);
+}
+
+input[type="date"] {
+    justify-self: center;
+    background-color: var(--input-date-bg);
+    padding: .7rem;
+    border-radius: .6rem;
+    margin-bottom: .8rem;
+}
+
+output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+
+    font-size: .8rem;
+    color: var(--text-cl);
+}
