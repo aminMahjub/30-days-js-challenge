@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+:root {
+    --app-bg: rgb(20, 22, 39);
+    --important-cl: var(--input-date-bg);
+    --input-date-bg: rgb(207, 207, 16);
+    --text-cl: rgb(255, 255, 255);
+    --button-bg: rgb(37, 37, 148);
+    --reset-btn-bg: rgb(143, 48, 48);
+}
+
+* {
+    padding: 0rem;
+    margin: 0rem;
+    border: 0rem;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: var(--app-bg);
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+
+    font-weight: 500;
+    font-family: 'Tilt Neon', cursive;
+    color: var(--text-cl);
+}
+
+main {
+    align-self: center;
+    background-color: var(--important-cl);
+    border-radius: .7rem;
+    padding: 2rem;
+    width: 25rem;
+}
+
+.stopwatch {
+    text-align: center;
+    margin-bottom: .6rem;
+    font-size: 6.5rem;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-wrapper button {
+    font-size: 1.3rem;
+    padding: .6rem;
+    border-radius: .7rem;
+    background-color: var(--button-bg);
+    color: var(--text-cl);
+    cursor: pointer;
+}
+
+.button-wrapper .reset-btn {
+    background-color: var(--reset-btn-bg);
+}
