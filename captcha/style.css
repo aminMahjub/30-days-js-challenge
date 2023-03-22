@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+:root {
+    --app-bg: rgb(20, 22, 39);
+    --btn-bg: rgb(255, 99, 71);
+    --quotes-bg: rgb(3, 120, 156);
+    --text-cl: rgb(255, 255, 255);
+    --quotes-txt-cl: rgb(58, 58, 61);
+}
+
+* {
+    padding: 0rem;
+    margin: 0rem;
+    border: 0rem;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: var(--app-bg);
+    height: 100vh;
+    display: grid;
+
+    font-weight: 500;
+    font-family: 'Tilt Neon', cursive;
+    color: var(--text-cl);
+}
+
+main {
+    align-self: center;
+    margin-inline: auto;
+    display: grid;
+    justify-content: center;
+    background-color: var(--quotes-bg);
+    padding: .7rem;
+    min-width: 20%;
+    border-radius: .7rem;
+}
+
+.captcha-rep-container {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: .4rem;
+    margin-bottom: .8rem;
+}
+
+.captcha-rep-container code {
+    padding: .6rem;
+    font-size: 1.5rem;
+    background-color: var(--quotes-txt-cl);
+    border-radius: .7rem;
+}
+
+.captcha-rep-container button {
+    padding: .4rem;
+    border-radius: .7rem;
+    background-color: green;
+    color: var(--text-cl);
+    cursor: pointer;
+}
+
+main label {
+    font-size: .9rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main input {
+    padding: .4rem;
+    border-radius: .7rem;
+}
+
+.error-message {
+    outline: 2px solid red;
+}
+
+.success-message {
+    outline: 2px solid greenyellow;
+}
