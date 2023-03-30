@@ -1,0 +1,42 @@
+* {
+    margin: 0rem;
+    padding: 0rem;
+    border: 0rem;
+    box-sizing: border-box;
+}
+
+body,
+ html {
+    height: 100vh;
+    background-color: darkblue;
+}
+
+#searchBox {
+    padding: .5rem;
+    border-radius: .4rem;
+    width: 40%;
+    margin: 1rem auto 4.4rem;
+
+    display: block;
+    margin-inline: auto;
+}
+
+.movies-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(3, 1fr);
+    gap: .8rem;
+    justify-content: center;
+}
+
+.movie {
+    background-color: blueviolet;
+    border-radius: .7rem;
+    padding: .4rem;
+    cursor: pointer;
+}
+
+.movie .title {
+    font-size: 1.2rem;
+    color: white;
+}
