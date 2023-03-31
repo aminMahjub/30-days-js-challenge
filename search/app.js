@@ -7,7 +7,7 @@ function searchMovie() {
     let searchMovieResult = [];
 
     if (searchVal === 'Empty') {
-        movieContainer.innerHTML === ''
+        movieContainer.innerHTML === '';
         createMovieElement(movies, movieContainer);
     } else {
         movieContainer.innerHTML = '';
@@ -16,8 +16,6 @@ function searchMovie() {
             for (let i = 0; i < searchVal.length; i++) {
                 if (searchVal[i] === movie[i]) {
                   s = movie;  
-                } else if (searchVal === movie) {
-                    return movie;
                 } else {
                     s = null;
                     break;

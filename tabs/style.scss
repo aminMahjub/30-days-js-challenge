@@ -1,0 +1,61 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+$tabs: 'html', 'css', 'js';
+
+section {
+    visibility: hidden;
+    background-color: gold;
+    width: 100%;
+}
+
+@each $tab in $tabs {
+    ##{$tab}Tab:checked + section.#{$tab} {
+        visibility: visible;
+    }   
+}
+
+main {
+    margin-inline: auto;
+    margin-block-start: 10rem;
+
+    max-width: min(100%, 24rem);
+}   
+
+
+.tabs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+
+    input {
+        appearance: none;
+        -webkit-appearance: none;
+
+        background-color: rebeccapurple;
+        color: red;
+        width: 7rem;
+        height: 2rem;
+        border-radius: .2rem;
+
+        &:checked {
+            background-color: aliceblue;
+        }
+    }
+
+    article {
+        position: relative;
+    }
+
+    label {
+        position: absolute;
+        left: 40px;
+        top: 5px;
+        color: white;
+    }
+}

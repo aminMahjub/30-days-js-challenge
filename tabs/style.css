@@ -1,0 +1,60 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+section {
+  visibility: hidden;
+  background-color: gold;
+  width: 100%;
+}
+
+#htmlTab:checked + section.html {
+  visibility: visible;
+}
+
+#cssTab:checked + section.css {
+  visibility: visible;
+}
+
+#jsTab:checked + section.js {
+  visibility: visible;
+}
+
+main {
+  margin-inline: auto;
+  -webkit-margin-before: 10rem;
+          margin-block-start: 10rem;
+  max-width: min(100%, 24rem);
+}
+
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tabs input {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  background-color: rebeccapurple;
+  color: red;
+  width: 7rem;
+  height: 2rem;
+  border-radius: 0.2rem;
+}
+.tabs input:checked {
+  background-color: aliceblue;
+}
+.tabs article {
+  position: relative;
+}
+.tabs label {
+  position: absolute;
+  left: 40px;
+  top: 5px;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
