@@ -6,55 +6,107 @@
     box-sizing: border-box;
 }
 
+:root {
+    --app-bg: #141627;
+    --box-border: #08F5F5;
+    --timeline-color: #31E231;
+    --text-cl: #fff;
+    --station-non-active: #4E4C4C;
+    --disabled-btn: #132838;
+}
+
+body,
+html {
+    background-color: var(--app-bg);
+    height: 100vh;
+    overflow-x: hidden;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    display: grid;
+}
+
 main {
     margin-inline: auto;
-    margin-block-start: 10rem;
-    max-width: min(100%, 24rem);
+    align-self: center;
+    max-width: 50rem;
+    width: 100%;
+    border: 1px solid var(--box-border);
+    background-color: transparent;
+    padding: .8rem .3rem;
+    border-radius: .3rem;
+}
 
+.time-lines {
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.time-line {
+    position: absolute;
+    height: .2rem;
+    width: 0%;
+    top: 12px;
+    background-color: var(--timeline-color);
+    border-radius: .4rem;
+    z-index: 1;
+    transition: all .2s linear;
+}
+
+.time-lines::before {
+    content: '';
+    height: .2rem;
+    width: 100%;
+    display: inline-block;
+    background-color: var(--station-non-active);
+    position: absolute;
+    top: 12px;
+    z-index: 0;
+}
+
+.stations-wrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-}   
-
-.station {
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
 }
 
-.station span {
-    font-size: 1.2rem;
-    color: white;
-    background-color: rebeccapurple;
-    padding: .8rem;
+.stations {
+    padding: .1rem .5rem .2rem;
+    background-color: var(--app-bg);
+    border: 2px solid var(--station-non-active);
     border-radius: 50%;
+    color: var(--text-cl);
+    z-index: 1;
+    transition: border-color .3s ease;
 }
 
-.station .first-station {
-    background-color: red;
-}
-
-.station div {
-    width: 10vw;
-    height: 1rem;
-    background-color: gray;;
-}
-
-.stayed-station span {
-    background-color: red;
+.active {
+    border-color: var(--timeline-color);
 }
 
 .button-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 13rem;
-    margin: 13rem 24rem 0rem;
 }
 
 .button-wrapper button {
-    background-color: sandybrown    ;
-    color: white;
-    padding: .7rem;
+    padding: .5rem;
+    font-size: 1.2rem;
     cursor: pointer;
+    border-radius: .3rem;
+    border: 1px solid var(--box-border);
+    background-color: transparent;
+    color: var(--text-cl);
+    transition: all .1s linear;
+}
+
+.button-wrapper button:hover {
+    color: var(--app-bg);
+    background-color: var(--box-border);
+}
+
+.button-wrapper .disabled-btn {
+    cursor: not-allowed;
+    background-color: var(--disabled-btn);
 }
